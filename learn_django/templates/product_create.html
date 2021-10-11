@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "navbar.html" %}
+<h1>This is product create page</h1>
+by : {{ request.user }}
+
+<form action="." method="POST">{%  csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" >
+</form>
+
+
+{% endblock %}
+
+
+
+

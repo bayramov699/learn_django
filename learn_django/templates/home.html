@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "navbar.html" %}
+<h1>Hello world</h1>
+
+by : {{ request.user }}
+<p>extends base.html</p>
+
+<p>
+    {{ my_text }}, {{ my_number }}
+</p>
+<ul>
+    {% for a in my_list %}
+        {% if a == "laugh" %}
+            <li>{{forloop.counter}})  {{ "laughs" }}</li>
+        {% else %}
+            <li>{{forloop.counter}})  {{ a }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+
+
